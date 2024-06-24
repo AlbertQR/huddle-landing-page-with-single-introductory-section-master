@@ -110,6 +110,7 @@ body {
 
     .text-content {
       text-align: left;
+      align-self: center;
 
       .lead {
         font-size: 2.5rem;
