@@ -109,8 +109,9 @@ body {
     }
 
     .text-content {
+      margin-top: 3rem;
       text-align: left;
-      align-self: center;
+      align-self: flex-start;
 
       .lead {
         font-size: 2.5rem;
