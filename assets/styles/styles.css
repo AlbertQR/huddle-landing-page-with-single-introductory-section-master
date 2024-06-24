@@ -1,0 +1,193 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2.25rem;
+  background-color: var(--violet);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background-image: url('../images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    padding: 4rem 5rem 3rem 5rem;
+    background-image: url('../images/bg-desktop.svg') !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+
+.logo {
+  img {
+    height: 1.95rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo {
+    img {
+      height: 3.5rem;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+  gap: 3rem;
+
+  img {
+    max-width: 100%;
+  }
+
+  .text-content {
+    text-align: center;
+
+    .lead {
+      font-family: Poppins, sans-serif;
+      font-weight: 600;
+      color: whitesmoke;
+    }
+
+    .text {
+      margin-top: 1rem;
+      color: #f5f5f5;
+      line-height: 1.5rem;
+    }
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: .75rem 4.75rem;
+      font-size: .95rem;
+      background-color: #f5f5f5;
+      text-decoration: none;
+      border-radius: 2rem;
+      color: var(--violet);
+      box-shadow: 0 3px 7px hsl(256, 52%, 21%);
+      transition: all .35s ease-in-out;
+
+      &:hover {
+        color: #f5f5f5;
+        background-color: var(--softMagenta);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    flex-direction: row;
+    margin-top: 5.5rem;
+
+    img {
+      width: 145%;
+      max-width: 60vw;
+    }
+
+    .text-content {
+      text-align: left;
+
+      .lead {
+        font-size: 2.5rem;
+      }
+
+      .text {
+        font-size: 1.125rem;
+      }
+
+      .register-btn {
+        padding: 1rem 4.75rem;
+        font-size: 1.15rem;
+      }
+    }
+  }
+}
+
+.social-media {
+  margin-top: 4rem;
+  align-self: center;
+}
+
+@media screen and (min-width: 992px) {
+  .social-media {
+    display: flex;
+    align-self: flex-end;
+    gap: 1.5rem;
+    margin-top: auto;
+
+    svg {
+      height: 2.5rem;
+    }
+  }
+}
+
+.social-link {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  transition: all .35s ease-in-out;
+}
+
+circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+text {
+  fill: #fff;
+  font-family: Calibri, sans-serif;
+  font-size: 2rem;
+  transform: translate(38%, 71%);
+  font-weight: 600;
+}
+
+#instagram-path {
+  transform: translate(25%, 25%);
+  fill: #fff;
+}
+
+#twitter-path {
+  transform: translate(27%, 31%);
+  fill: #fff;
+}
+
+svg:hover #instagram-path {
+  fill: var(--softMagenta);
+}
+
+svg:hover #twitter-path {
+  fill: var(--softMagenta);
+}
+
+svg:hover circle {
+  stroke: var(--softMagenta);
+}
+
+svg:hover text {
+  fill: var(--softMagenta);
+}
